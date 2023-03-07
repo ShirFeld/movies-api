@@ -5,14 +5,16 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 //pages
 import App from './App';
-import PostMovie from "./PostMovie";
+import Main from './Main';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="/post" element={<PostMovie />} />
+      <Route path="/movies/:type" element={<Main />} />
+      <Route path="/*" element={<h1>Error Page</h1>}></Route>
     </Routes>
   </BrowserRouter>
 );

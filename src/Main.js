@@ -7,10 +7,15 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 
+import { useParams } from "react-router-dom";
+
 
 export default function Main() {
 
-    const api_url = "https://api.themoviedb.org/3/movie/popular?api_key=7b2941d346f0db132e96feb135b4e8ff";
+    const { type } = useParams()
+
+
+    const api_url = `https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=7b2941d346f0db132e96feb135b4e8ff`;
     const api_search = "https://api.themoviedb.org/3/search/movie?api_key=7b2941d346f0db132e96feb135b4e8ff&query="
 
     const [movies, setMovies] = useState([]);
@@ -30,6 +35,16 @@ export default function Main() {
 
     // console.log(movies);
 
+
+    // get ny category
+    useEffect(() => {
+        getMovies()
+    }, [type])
+
+
+
+
+
     // get by search
     const handleSearch = (e) => {
         e.preventDefault(); // not refresh the website after clicking the button
@@ -47,8 +62,9 @@ export default function Main() {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
-                                <Nav.Link href="/">Popular</Nav.Link>
-                                <Nav.Link href="/post">Add Movie</Nav.Link>
+                                <Nav.Link href="/movies/popular">Popular</Nav.Link>
+                                <Nav.Link href="/movies/top_rated">Top Rated</Nav.Link>
+                                <Nav.Link href="/movies/upcoming">Upcoming</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
