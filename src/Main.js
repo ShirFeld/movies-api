@@ -11,15 +11,16 @@ import { useParams } from "react-router-dom";
 
 
 export default function Main() {
-
-    const { type } = useParams()
-
+    
+    const { type } = useParams();
 
     const api_url = `https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=7b2941d346f0db132e96feb135b4e8ff`;
     const api_search = "https://api.themoviedb.org/3/search/movie?api_key=7b2941d346f0db132e96feb135b4e8ff&query="
 
     const [movies, setMovies] = useState([]);
     const [term, setTerm] = useState('');
+
+
 
     // GET
     const getMovies = async () => {
@@ -33,16 +34,10 @@ export default function Main() {
         getMovies();
     }, []);
 
-    // console.log(movies);
-
-
-    // get ny category
+    // get by category
     useEffect(() => {
         getMovies()
     }, [type])
-
-
-
 
 
     // get by search

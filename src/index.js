@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 //pages
 import App from './App';
 import Main from './Main';
+import NotFound from './NotFound';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +15,7 @@ root.render(
     <Routes>
       <Route path="/" element={<App />} />
       <Route path="/movies/:type" element={<Main />} />
-      <Route path="/*" element={<h1>Error Page</h1>}></Route>
+      <Route path="*" element={<NotFound />}></Route>
     </Routes>
   </BrowserRouter>
 );
