@@ -1,5 +1,6 @@
 import React from 'react'
 import "../css/App.css"
+import Footer from '../pages/Footer';
 import MovieCard from './MovieCard';
 import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
@@ -79,6 +80,7 @@ export default function Main() {
                 )}
             </div>
             <Outlet />
+            <Footer />
         </div>
     )
 }
