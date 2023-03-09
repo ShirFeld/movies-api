@@ -1,17 +1,17 @@
 import React from 'react'
-import "./css/App.css"
+import "../css/App.css"
 import MovieCard from './MovieCard';
 import { useState, useEffect } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
+import { Outlet } from "react-router-dom";
 
 import { useParams } from "react-router-dom";
 
 
 export default function Main() {
-    
+
     const { type } = useParams();
 
     const api_url = `https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=7b2941d346f0db132e96feb135b4e8ff`;
@@ -78,6 +78,7 @@ export default function Main() {
                     <div key={index}> <MovieCard{...movie} /></div>
                 )}
             </div>
+            <Outlet />
         </div>
     )
 }

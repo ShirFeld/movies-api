@@ -5,8 +5,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 //pages
 import App from './App';
-import Main from './Main';
-import NotFound from './NotFound';
+import Main from './components/Main';
+import NotFound from './pages/NotFound';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

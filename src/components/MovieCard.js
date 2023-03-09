@@ -1,5 +1,5 @@
 import React from 'react';
-import "./css/MovieCard.css";
+import "../css/MovieCard.css";
 
 export default function MovieCard(props) {
 
