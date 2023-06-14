@@ -11,7 +11,6 @@
   - React-router-dom
 
 
-* Socket.io
 
 <br><br>
 ## **1.Main Page**
