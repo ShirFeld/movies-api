@@ -8,7 +8,7 @@
 
   - React
   - Bootstrap
-  - React-router-dom
+ 
 
 
 
@@ -26,4 +26,4 @@
 
 <br><br>
 ## **1.Footer**
-<img  src="/images/footer.PNG"  width="500" height="400" title="Footer" />
+<img  src="/images/footer.PNG"  width="500" height="200" title="Footer" />
