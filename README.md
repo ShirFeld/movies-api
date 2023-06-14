@@ -1,8 +1,8 @@
 # Movies api
 
-> This site gives the option of sharing code live with several participants in the room.
+> This website uses the following url https://www.themoviedb.org/ to display movies,search for a specific movie and more
 
- https://client-code.onrender.com 
+
 
 #### <ins>Using</ins>
 
